@@ -56,10 +56,10 @@ def app_functions():
     return
 
 def create_account(username, pin, confirmation):
-    create_prompt = ("""\nTo create an account, you will need to enter a username and a 4-digit pin which will serve as your password.\nThese credentials will be used to log in each time.\nOnce details are entered, please press enter to continue.""")
+    create_prompt = ("""\nTo create an account, you will need to enter a username and a 4-digit pin which will serve as your password.\nThese credentials will be used to log in each time.\nIf you would like to proceed with creating an account, please note that you will need to take additional time (1-2 minutes) to come up with a unique username and password.\nIn addition, you will need to memorize or store this username and password combination for use when you return to this application at a later time.\nOnce details are entered, please press enter to continue.""")
     username_prompt = ("""Username: """)
     pin_prompt = ("""Pin: """)
-    confirmation_prompt = ("""Are you sure you want to create this account?\nPress ENTER to create this account or type 9 to return to the welcome screen.\n""")
+    confirmation_prompt = ("""Are you sure you want to create this account?\nThis is a rookie application, so we cannot promise that your username and password combination will not be leaked.\nTherefore, we recommend that you pick a username and password that you do not use for key accounts.\nPlease proceed with caution if you choose to do so.\nPress ENTER to create this account or type 9 to return to the welcome screen.\n""")
     print(create_prompt)
     username = input(username_prompt)
     pin = input(pin_prompt)
